@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className="bg-[#0B0F2A]/10 backdrop-blur-md text-white p-4 sticky top-4 z-50 border border-gray-800 rounded-xl mx-4 md:mx-10 lg:mx-20 shadow-lg">
       <div className="container mx-auto flex items-center justify-between">
         
-        {/* --- LEFT SECTION: ECESOC Text Only --- */}
+        {/* --- LEFT SIDE: ECESOC  --- */}
         <div className="flex items-center">
           <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-wide uppercase">
             <Image
@@ -29,7 +29,7 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* --- CENTER SECTION: Main Navigation Links --- */}
+        {/* --- CENTER : Main Navigation Links --- */}
         <div className="hidden lg:flex items-center gap-x-6">
           {navLinks.map((link) => (
             <Link
@@ -42,7 +42,7 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* RIGHT SECTION: Social Icons */}
+        {/* RIGHT SIDE: INSTA LINKEDIN ETC LINKS */}
         <div className="flex items-center gap-5">
           
           <a
