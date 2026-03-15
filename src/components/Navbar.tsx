@@ -1,4 +1,3 @@
-
 import Link from 'next/link';
 
 export default function Navbar() {
@@ -11,7 +10,8 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="bg-[#0B0F2A] text-white p-4 sticky top-0 z-50 shadow-md">
+    // UPDATED: Added opacity (/80), backdrop-blur-md, and a subtle bottom border
+    <nav className="bg-[#0B0F2A]/80 backdrop-blur-md text-white p-4 sticky top-0 z-50 border-b border-gray-800 shadow-sm">
       <div className="container mx-auto flex items-center justify-between">
         
         {/* --- LEFT SECTION: ECESOC Text Only --- */}
