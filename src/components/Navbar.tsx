@@ -1,4 +1,6 @@
 import Link from 'next/link';
+import Image from 'next/image';
+import { Instagram, Linkedin, Mail } from "lucide-react";
 
 export default function Navbar() {
   const navLinks = [
@@ -15,7 +17,14 @@ export default function Navbar() {
         
         {/* --- LEFT SECTION: ECESOC Text Only --- */}
         <div className="flex items-center">
-          <Link href="/" className="text-xl font-bold tracking-wide uppercase">
+          <Link href="/" className="flex items-center gap-2 text-xl font-bold tracking-wide uppercase">
+            <Image
+              src="/data/images/logo.jpg"
+              alt="ECESOC Logo"
+              width={40}
+              height={40}
+              className="h-9 w-auto"
+            />
             ECESOC
           </Link>
         </div>
@@ -26,7 +35,6 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              // UPDATED: Changed hover:text-blue-300 to hover:text-gray-300
               className="text-white hover:text-gray-300 transition-colors duration-200 text-sm font-medium"
             >
               {link.name}
@@ -34,23 +42,34 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* --- RIGHT SECTION: Auth Buttons --- */}
-        <div className="flex items-center gap-4">
-          <Link
-            href="/sign-in"
-            // UPDATED: Changed hover:text-blue-300 to hover:text-gray-300
-            className="text-white hover:text-gray-300 transition-colors text-sm font-medium"
+        {/* RIGHT SECTION: Social Icons */}
+        <div className="flex items-center gap-5">
+          
+          <a
+            href="mailto:yourmail@gmail.com"
+            className="hover:text-gray-300 transition-colors"
           >
-            Sign In
-          </Link>
-          <Link
-            href="/sign-up"
-            className="bg-blue-600 hover:bg-blue-700 transition-colors text-white text-sm font-semibold py-2 px-5 rounded-md"
+            <Mail size={20} />
+          </a>
+
+          <a
+            href="https://instagram.com/yourpage"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-pink-400 transition-colors"
           >
-            Sign Up
-          </Link>
+            <Instagram size={20} />
+          </a>
+
+          <a
+            href="https://linkedin.com/company/yourpage"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-blue-400 transition-colors"
+          >
+            <Linkedin size={20} />
+          </a>
         </div>
-        
       </div>
     </nav>
   );
