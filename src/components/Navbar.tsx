@@ -10,8 +10,7 @@ export default function Navbar() {
   ];
 
   return (
-    // UPDATED: Added opacity (/80), backdrop-blur-md, and a subtle bottom border
-    <nav className="bg-[#0B0F2A]/80 backdrop-blur-md text-white p-4 sticky top-0 z-50 border-b border-gray-800 shadow-sm">
+    <nav className="bg-[#0B0F2A]/10 backdrop-blur-md text-white p-4 sticky top-4 z-50 border border-gray-800 rounded-xl mx-4 md:mx-10 lg:mx-20 shadow-lg">
       <div className="container mx-auto flex items-center justify-between">
         
         {/* --- LEFT SECTION: ECESOC Text Only --- */}
@@ -27,7 +26,8 @@ export default function Navbar() {
             <Link
               key={link.name}
               href={link.href}
-              className="text-white hover:text-blue-300 transition-colors duration-200 text-sm font-medium"
+              // UPDATED: Changed hover:text-blue-300 to hover:text-gray-300
+              className="text-white hover:text-gray-300 transition-colors duration-200 text-sm font-medium"
             >
               {link.name}
             </Link>
@@ -38,7 +38,8 @@ export default function Navbar() {
         <div className="flex items-center gap-4">
           <Link
             href="/sign-in"
-            className="text-white hover:text-blue-300 transition-colors text-sm font-medium"
+            // UPDATED: Changed hover:text-blue-300 to hover:text-gray-300
+            className="text-white hover:text-gray-300 transition-colors text-sm font-medium"
           >
             Sign In
           </Link>
